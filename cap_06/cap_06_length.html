@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function soma(x, y) {
+            console.log('Quantidade de argumentos: ' + arguments.length);
+            return x + y;
+        }
+        window.onload = function(){
+            alert(soma.length);
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="alert('Soma: ' + soma(5, 4, 26, 90))">soma(5, 4, 26)</button>
+</body>
+
+</html>

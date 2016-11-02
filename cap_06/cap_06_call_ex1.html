@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function apartamentoDescricao(local, quartos, garagem) {
+            this.local = local;
+            this.quartos = quartos;
+            this.garagem = garagem;
+        };
+        function apartamentoVenda(local, quantidade, vendidos) {
+            this.local = local;
+            this.quantidade = quantidade;
+            this.vendidos = vendidos;
+        };
+        var zonaSulDescricao = new apartamentoDescricao('Zonal Sul', 4, 'sim'),
+            zonaSulVenda = new apartamentoVenda('Zonal Sul', 12, 7);
+
+        alert(zonaSulDescricao.local + '\n' + zonaSulDescricao.quartos + '\n' + zonaSulDescricao.garagem + '\n' + zonaSulVenda.quantidade + '\n' + zonaSulVenda.vendidos);
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+</body>
+
+</html>

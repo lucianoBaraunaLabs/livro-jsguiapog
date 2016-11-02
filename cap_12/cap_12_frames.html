@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contagem Regressiva</title>
+  <script type="text/javascript">
+    function alterarFrame(){
+      frames[0].location="http://w3.org";
+    }
+    function recarregar() {
+      frames[0].location="https://www.google.com.br/";
+
+    }
+  </script>
+</head>
+<body>
+  <iframe src="https://www.google.com.br/"></iframe>
+  <iframe src="http://maujor.com"></iframe>
+  <iframe src="https://novatec.com.br/"></iframe>
+  <button type="button" onclick="alterarFrame();">ALTERAR FRAME</button>
+  <button type="button" onclick="recarregar();">Reset</button>
+</body>
+</html>

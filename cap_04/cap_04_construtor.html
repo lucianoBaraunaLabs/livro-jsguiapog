@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+// Construtor - Classe
+// function Cilindro(r,h,m){
+//     this.raioBase = r;
+//     this.altura = h;
+//     this.medida = m
+//     this.areaBase = function calculaAreaBase(){
+//         aBase = Math.PI * Math.pow(this.raioBase, 2)
+//         return aBase;
+//     };
+//     this.areaLateral = function calculaAreaLateral(){
+//         aLateral = 2 * Math.PI * this.raioBase * this.altura;
+//         return aLateral
+//     };
+//     this.areaTotal = function calculaAreaTotal(){
+//         return 2 * aBase + aLateral;
+//     };
+//     this.volume = function calculoVolume(){
+//         return aBase * this.altura;
+//     }
+// };
+//
+// cilindroUm = new Cilindro(2, 5);
+// alert("Primeiro Cilindro" + "\nRaio da base: " + cilindroUm.raioBase + "\nAltura: " + cilindroUm.altura + "\nÁrea da base: " + cilindroUm.areaBase());
+//
+// cilindroDois = new Cilindro(3, 10);
+// alert("Segundo Cilindro" + "\nRaio da base: " + cilindroDois.raioBase + "\nAltura: " + cilindroDois.altura + "\nÁrea da base: " + cilindroDois.areaBase() + "\nÁrea Lateral: " + cilindroDois.areaLateral() + "\n Área Total: " + cilindroDois.areaTotal() + "\nVolume: " + cilindroDois.volume());
+
+
+function Cilindro(r,h,m){
+    var _this = this;
+    this.raioBase = r;
+    this.altura = h;
+    this.medida = m;
+    this.calcBase = Math.PI * Math.pow(this.raioBase, 2);
+    this.areaBase = function calculaAreaBase(){
+
+        if(this.medida == "cm"){
+            aBase = calculaCentimetro();
+            // aBase = Math.round(Math.PI * Math.pow(this.raioBase, 2) / 100) + this.medida;
+
+
+
+
+        } if(this.medida == "m") {
+            aBase = Math.round(Math.PI * Math.pow(this.raioBase, 2) / 1000) + this.medida;
+        }
+        return aBase;
+
+
+
+
+
+
+        // aBase = Math.PI * Math.pow(this.raioBase, 2)
+        // return aBase;
+
+
+
+    };
+    function calculaCentimetro(){
+        valor = Math.round(_this.calcBase / 100) + _this.medida;
+        return valor
+    };
+
+    // function calculaMetro(){
+    //     aBase = Math.round(this.calcBase / 1000) + this.medida;
+    //     return aBase;
+    // };
+
+
+    this.areaLateral = function calculaAreaLateral(){
+        aLateral = 2 * Math.PI * this.raioBase * this.altura;
+        return aLateral
+    };
+    this.areaTotal = function calculaAreaTotal(){
+        return 2 * aBase + aLateral;
+    };
+    this.volume = function calculoVolume(){
+        return aBase * this.altura;
+    };
+};
+
+cilindroDois = new Cilindro(150, 10, "cm");
+alert("Segundo Cilindro" +
+      "\nRaio da base: " +
+      cilindroDois.raioBase +
+      "\nAltura: " +
+      cilindroDois.altura +
+      "\nÁrea da base: " +
+      cilindroDois.areaBase() +
+      "\nÁrea Lateral: " +
+      cilindroDois.areaLateral() +
+      "\n Área Total: " +
+      cilindroDois.areaTotal() +
+      "\nVolume: " +
+      cilindroDois.volume()
+    );
+
+
+
+
+
+</script>
+
+</html>

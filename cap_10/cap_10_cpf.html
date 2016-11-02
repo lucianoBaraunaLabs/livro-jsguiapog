@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+      <script type="text/javascript">
+        var padrao = /^([\d]{3})([\d]{3})([\d]{3})([\d]{2})/;
+        function mascaraCpf() {
+        	var cpf = document.forms[0].elements[0].value;
+        	if(!padrao.test(cpf) ) {
+        	alert('Entre os 11 números do CPF\nsem pontos e traço');
+        	} else {
+        	document.forms[0].elements[0].value = cpf.replace(padrao, '$1.$2.$3-$4');
+        	};
+        }
+        </script>
+    </head>
+
+<body>
+  <form action="" method="get">
+    <label> CPF: <input type="text" onblur="mascaraCpf()" /></label>
+  </form>
+</body>
+
+</html>

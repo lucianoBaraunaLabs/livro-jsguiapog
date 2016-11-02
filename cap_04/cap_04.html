@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+// var livro = new Object();
+//
+// livro.titulo = "Ajax com jquery";
+// livro.autor = "Mauricio";
+// livro.pagina = 432;
+// livro.preco = "R$:69,00";
+// livro.freteSedex = function(ceporigem, cepdestino, peso){
+//     var valorFrete = "";
+//     return valorFrete;
+// }
+//
+// livro.capitulos = new Object();
+//
+// livro.capitulos.capitulo1 = "Esse é o capitulo 1";
+// livro.capitulos.capitulo2 = "Esse é o capitulo 2";
+
+var livro = {
+    "titulo": "Ajax com jquery",
+    "autor": "Mauricio",
+    "pagina": 432,
+    "preco": "R$:69,00",
+    "freteSedex": function(ceporigem, cepdestino, peso){
+                    var valorFrete = "";
+                    return valorFrete;
+    },
+    "capitulos" : {
+        "capitulo1": "Esse é o capitulo 1",
+        "capitulo2": "Esse é o capitulo 2"
+    }
+};
+
+// For simples
+// var pares = "";
+// for(var prop in livro){
+//     pares += prop + ": " + livro[prop] + "\n";
+// };
+// alert(pares);
+
+// For alinhado
+var pares = "";
+for(var prop in livro){
+    if(typeof livro[prop] == "object"){
+        for(var prop1 in livro[prop]){
+            pares += prop1 + ": " + livro[prop][prop1] + "\n";
+        }
+    } else {
+        pares += prop + ": " + livro[prop] + "\n";
+    }
+
+
+};
+
+alert(pares);
+
+
+
+</script>
+
+</html>

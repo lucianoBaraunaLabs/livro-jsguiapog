@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+var msg = "";
+
+for(var i = 0; i <= 20; i++){
+    if(i == 20){
+        msg += "";
+        break;
+    } else if(i % 2 != 0) {
+        msg += "";
+        continue;
+    }
+    msg += i + ", ";
+}
+
+document.write("Restul for " + msg);
+
+var loopWhile = "",
+    j = 0;
+
+// while(j <= 10){
+//     if(j == 10){
+//         loopWhile += j + "";
+//         break;
+//     }
+//     loopWhile += j + ", ";
+//     j++;
+// }
+
+while(j <= 10){
+    if (j == 10) {
+        loopWhile += j + "";
+        break;
+    }else if(j % 2 == 0){
+        loopWhile += j + ", ";
+    }
+    j++;
+}
+
+var i = 0;
+var n = "";
+
+while (i < 5) {
+  i++;
+
+  if (i === 3) {
+    continue;
+  }
+
+  n += i;
+}
+
+
+
+
+
+document.write("<p>" + loopWhile + "</p>");
+
+document.write("<p>" + n + "</p>");
+
+
+
+
+</script>
+</html>

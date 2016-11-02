@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function naoEhNumero(x) {
+            eval('var bool = isNaN(x); alert(bool);');
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="naoEhNumero(1.56);">isNaN(1.56);</button>
+    <button type="button" onclick="naoEhNumero(-3/5);">isNaN(-3/5);</button>
+    <button type="button" onclick="naoEhNumero('maujor');">isNaN(maujor);</button>
+</body>
+
+</html>

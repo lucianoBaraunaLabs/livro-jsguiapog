@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+      function slocalecompare(){
+      var string1 = document.form.string1.value,
+          string2 = document.form.string2.value,
+          resultado = string1.localeCompare(string2);
+          if (resultado < 0) {
+            document.form.resultado.value = "A string " + string1 + " é antes da string " + string2 + " ";
+          } else if (resultado > 0) {
+            document.form.resultado.value = "A string " + string1 + " é depois da string " + string2 + " ";
+          } else {
+            document.form.resultado.value = "A string " + string1 + " é igual à string " + string2 + " ";
+          }
+      }
+    </script>
+</head>
+<body>
+
+  <form name="form" action="" method="get">
+      <label for="">string: <input type="text" name="string1" value="maujor" /></label>
+      <label for="">comparar com: <input type="text" name="string2" value="maujor" /></label>
+
+      <button type="button" onclick="slocalecompare()">string.slocalecompare()</button>
+      <input type="text" name="resultado" size="50" />
+  </form>
+</body>
+</html>

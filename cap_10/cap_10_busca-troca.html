@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var str = "www.maujor.com/arquivo-um.html";
+            str += ", www.maujor.com/arquivo-dois.html";
+            str += ", www.maujor.com/arquivo-tres.html";
+        var padrao = /(www[.maujorc]+\/)([arquivo]+)-([a-z]+).html/g;
+
+        var utilizadas = str.replace(padrao, '$1$3/$2.php');
+        console.log(str);
+        console.log(padrao);
+        console.log(utilizadas);
+
+        var url = new Array();
+        url.push("www.maujor.com/arquivo-um.html");
+        url.push("www.maujor.com/arquivo-dois.html");
+        url.push("www.maujor.com/arquivo-tres.html");
+        for (var i = 0; i < url.length; i++) {
+          console.log(url[i].replace(padrao, '$1$3/$2.php'));
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

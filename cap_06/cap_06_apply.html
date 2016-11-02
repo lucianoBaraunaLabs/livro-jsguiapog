@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function apartamentoDescricao(local, quartos, garagem) {
+            this.local = local,
+            this.quartos = quartos,
+            this.garagem = garagem
+        };
+        function apartamentoVenda(local, x, y, quantidade, vendidos) {
+            this.local = local,
+            this.quantidade = quantidade,
+            this.vendidos = vendidos
+            apartamentoDescricao.apply(this, arguments);
+        };
+        zonaSul = new apartamentoVenda('Zonal Sul', 4, 'sim', 17, 12);
+        window.onload = function() {
+            alert(zonaSul.local +'\n'+ zonaSul.quartos +'\n'+ zonaSul.garagem +'\n' + zonaSul.quantidade +'\n'+ zonaSul.vendidos);
+        };
+
+    </script>
+
+</head>
+<body>
+
+</body>
+
+</html>

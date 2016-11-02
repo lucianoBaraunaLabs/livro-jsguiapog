@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+
+      function sindexOf(){
+      var texto = "Javascript é uma linguagem muito legal.",
+          s = document.form.s.value,
+          i = Number(document.form.i.value);
+        console.log("entrou");
+        console.log("Retorno isfinite: " + isFinite(i));
+        if (isFinite(i) && i >= 0 && i <= texto.length-1) {
+          document.form.resultado.value = texto.indexOf(s,i);
+          console.log(texto.charAt(texto.indexOf(s,i)));
+        } else {
+          alert("Entre um índice válido para o ínicio");
+        }
+      }
+    </script>
+</head>
+<body>
+  <p>string com 38 caracteres:<br /> Javascript é uma linguagem muito legal.</p>
+  <form name="form" action="" method="get">
+      <label for="">indexOf: <input type="text" name="s" size="6" /></label>
+      <label for="">inicio: <input type="text" name="i" size="4" value="0" /></label>
+      <button type="button" onclick="sindexOf()">indexOf()</button>
+      <input type="text" name="resultado" size="4" maxlength="4" />
+  </form>
+</body>
+</html>

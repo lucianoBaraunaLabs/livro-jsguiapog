@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Testando troca de caminho de imgs</title>
+</head>
+<body>
+  <img src="img-1.png" alt="">
+  <img src="img-1.png" alt="">
+  <img src="img-1.png" alt="">
+  <img src="img-2.png" alt="">
+  <img src="img-2.png" alt="">
+  <img src="img-2.png" alt="">
+
+<script>
+  var imgs = document.querySelectorAll('img'),
+      caminho = "",
+      padrao = /1004911_580582982030115_848408165_n.jpg/g;
+  for (var i = 0; i < imgs.length; i++) {
+    caminho += "Imagem " + [i] + " " + imgs[i].src + '\n';
+  }
+  console.log(caminho.match(padrao).length);
+  console.log('O caminho é : ' + '\n' + caminho);
+
+
+
+</script>
+</body>
+</html>

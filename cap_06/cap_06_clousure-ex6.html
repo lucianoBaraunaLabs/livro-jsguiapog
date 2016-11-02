@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            function funcaoAuxiliar(j){
+                return function(){
+                    alert('Você clicou o botao ' + j)
+                }
+            }
+            var botao = document.getElementsByTagName('button');
+            for (var i = 0; i < botao.length; i++) {
+                botao[i].onclick = funcaoAuxiliar(i);
+            }
+
+        };
+
+    </script>
+
+</head>
+<body>
+    <button type="button">BOTAO O</button>
+    <button type="button">BOTAO 1</button>
+    <button type="button">BOTAO 2</button>
+    <button type="button">BOTAO 3</button>
+    <button type="button">BOTAO 4</button>
+    <button type="button">BOTAO 5</button>
+
+
+</body>
+
+</html>

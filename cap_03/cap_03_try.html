@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+
+    // try {
+    //     var x = u;
+    //     var y = x + 2;
+    //     alert(y);
+    // } catch (e) {
+    //     alert(e.message + "\n" + e.name + "\n" + e.toString());
+    // };
+
+    // var campo = prompt("Entre com um número maior que 0 e menor que 11", "");
+    // try{
+    //     if(campo <= 0){
+    //         throw("er1");
+    //     }
+    //     if(campo >= 11){
+    //         throw("er2");
+    //     }
+    //     if(isNaN(parseInt(campo))){
+    //         throw("er3");
+    //     }
+    // } catch(e){
+    //     if (e == "er1"){
+    //         alert("O número tem que ser maior que 0");
+    //     }
+    //     if (e == "er2"){
+    //         alert("O número tem que ser menor que 11");
+    //     }
+    //     if (e == "er3"){
+    //         alert("O número tem que ser maior que 0 e menor que 11");
+    //     }
+    // };
+
+    // var conteudo = "";
+    // try{
+    //     if(typeof conteudo == "function"){
+    //         throw("resposta01")
+    //     }
+    //     if(typeof conteudo == "string"){
+    //         throw("resposta02")
+    //     }
+    // }catch(e){
+    //     if(e == "resposta01"){
+    //         alert("Isso é uma funcao");
+    //     }
+    //     if(e == "resposta02"){
+    //         alert("Isso é uma string");
+    //     }
+    // };
+
+    // var campo = prompt("Entre com um número maior que 0 e menor que 11", "");
+    // try{
+    //     if(campo <= 0){
+    //         throw new Error("O número tem que ser maior que 0");
+    //     }
+    //     if(campo >= 11){
+    //         throw new Error("O número tem que ser menor que 11");
+    //     }
+    //     if(isNaN(parseInt(campo))){
+    //         throw new Error("O número tem que ser maior que 0 e menor que 11");
+    //     }
+    // } catch(e){
+    //     alert(e.message);
+    // };
+
+    var campo = prompt("Entre com um número maior que 0 e menor que 11", "");
+    try{
+        if(isNaN(parseInt(campo))){
+            throw {
+                name: "Erro no Javacsript",
+                message: document.write("Você precisa digitar um número")
+            }
+        }else {
+            if(campo <= 0){
+                throw {
+                    name: "Erro no Javacsript",
+                    message: document.write("O Número não pode ser 0")
+                }
+            }else if (campo >= 11){
+                throw {
+                    name: "Erro no Javacsript",
+                    message: document.write("O Número não pode ser 11")
+                }
+            }
+        }
+    } catch(e){
+        alert(e.name);
+        e.message;
+    } finally {
+        document.write("<p>" + "O que você digitou foi: " + campo + "</p>");
+    };
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        // Sem calle pq vc ja esta chamando a ela mesma
+        // var fatorial = function (n) {
+        //     if(n == 0) {return 1;}
+        //     return n*fatorial(n-1);
+        // }
+        // alert(fatorial(5));
+        // Caso seja uma funcao anonima vc precisa
+        function fatorial(n) {
+            if(n == 0) {return 1;}
+            return n*arguments.callee(n-1);
+        }
+        // ou
+        function fatorial(n) {
+            if(n == 0) {return 1;}
+            return n*fatorial(n-1);
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="alert(fatorial(5))">fatorial(30)</button>
+</body>
+
+</html>

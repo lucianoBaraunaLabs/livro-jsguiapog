@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+      function testeEscopo(){
+        soma = 2 + 6;
+        alert("A soma é: " + soma);
+      };
+      testeEscopo();
+      try {
+          alert("O dobro da soma é: " + 2*soma);
+      } catch (e) {
+        alert(e.message);
+      }
+    </script>
+
+</head>
+<body>
+    <p>carregou o html</p>
+
+</body>
+
+</html>

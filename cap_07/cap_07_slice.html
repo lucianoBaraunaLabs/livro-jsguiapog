@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+      var s = "Javascript é uma linguagem muito legal.";
+      function sslice(){
+        var inicio = document.form.inicio.value,
+            fim = document.form.fim.value;
+        if(fim == " "){ fim = s.length+1; }
+        var resultado = s.slice(inicio, fim);
+        document.form.resultado.value = resultado;
+
+      }
+    </script>
+</head>
+<body>
+  <p>A string é : "Javascript é uma linguagem muito legal."</p>
+  <form name="form" action="" method="get">
+      <label for="">inicio: <input type="text" name="inicio" size="3" /></label>
+      <label for="">fim: <input type="text" name="fim" size="3" /></label>
+
+      <button type="button" onclick="sslice()">string.slice()</button>
+      <input type="text" name="resultado" size="50" />
+  </form>
+</body>
+</html>

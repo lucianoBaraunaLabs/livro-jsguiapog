@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        var padrao = /^([\w-]+(\.[\w-]+)*)@(( [\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(\.[a-z]{2})?)$/i;
+
+        function validaEmail(){
+          var email = document.forms[0].elements[0].value;
+          if (padrao.test(email)) {
+            alert('Parabéns! Email Válido');
+          } else {
+            alert('E-mail inválido! Tente outra vez');
+          }
+        }
+    </script>
+</head>
+
+<body>
+   <form action="" method="get">
+     <label for="">E-mail: <input type="type" name="name"></label>
+     <button type="button" onclick="validaEmail();">VALIDAR</button>
+   </form>
+</body>
+
+</html>

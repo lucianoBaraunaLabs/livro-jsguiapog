@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+      function Cilindro(r,h){
+        this.raioBase = r,
+        this.altura = h
+
+        return r + h;
+      };
+      var cilindroUm = new Cilindro(2,5);
+      window.onload = function(){
+        console.log(cilindroUm.constructor);
+      }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="alert(cilindroUm.raioBase)" name="button">Executar função externa</button>
+
+
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function ehFinito(x) {
+            eval('var bool = isFinite(x); alert(bool);');
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="ehFinito(1.56);">isFinite(1.56);</button>
+    <button type="button" onclick="ehFinito(-3/5);">isFinite(-3/5);</button>
+    <button type="button" onclick="ehFinito('maujor');">isFinite(maujor);</button>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+      function funcaoExterna() {
+          alert("Função Externa");
+          function funcaoInterna() {
+              alert("Função Interna");
+          }
+          funcaoInterna();
+      }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="funcaoExterna()" name="button">Executar função externa</button>
+    
+
+</body>
+
+</html>

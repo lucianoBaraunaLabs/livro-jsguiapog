@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+// Construtor - Classe
+// function Cilindro(r,h,m){
+//     this.raioBase = r;
+//     this.altura = h;
+//     this.medida = m
+//     this.areaBase = function calculaAreaBase(){
+//         aBase = Math.PI * Math.pow(this.raioBase, 2)
+//         return aBase;
+//     };
+//     this.areaLateral = function calculaAreaLateral(){
+//         aLateral = 2 * Math.PI * this.raioBase * this.altura;
+//         return aLateral
+//     };
+//     this.areaTotal = function calculaAreaTotal(){
+//         return 2 * aBase + aLateral;
+//     };
+//     this.volume = function calculoVolume(){
+//         return aBase * this.altura;
+//     }
+// };
+//
+// cilindroUm = new Cilindro(2, 5);
+// alert("Primeiro Cilindro" + "\nRaio da base: " + cilindroUm.raioBase + "\nAltura: " + cilindroUm.altura + "\nÁrea da base: " + cilindroUm.areaBase());
+//
+// cilindroDois = new Cilindro(3, 10);
+// alert("Segundo Cilindro" + "\nRaio da base: " + cilindroDois.raioBase + "\nAltura: " + cilindroDois.altura + "\nÁrea da base: " + cilindroDois.areaBase() + "\nÁrea Lateral: " + cilindroDois.areaLateral() + "\n Área Total: " + cilindroDois.areaTotal() + "\nVolume: " + cilindroDois.volume());
+
+
+function Cilindro(r,h,m){
+    var _this = this;
+    this.raioBase = r;
+    this.altura = h;
+    this.medida = m;
+    this.areaBase = Math.PI * Math.pow(this.raioBase, 2);
+    this.areaLateral = 2 * Math.PI * this.raioBase * this.altura;
+    this.calcAreaTotal = 2 * this.areaBase + this.areaLateral;
+    this.areaTotal = this.areaBase + this.areaLateral;
+    this.volume = Math.round(this.areaBase * this.altura);
+    // Cm ou M
+    if(this.medida == "cm"){
+        return this.resultAbase = calculaCentimetro(this.areaBase),
+               this.resultLateral = calculaCentimetro(this.areaLateral),
+               this.resultAreaTotal = calculaCentimetro(this.areaTotal);
+    }if(this.medida == "m"){
+        return this.resultAbase = calculaMetro(this.areaBase),
+               this.resultLateral = calculaMetro(this.areaLateral),
+               this.resultAreaTotal = calculaMetro(this.areaTotal);
+    };
+    // Metodos de conversao
+    function calculaCentimetro(n){
+        valorCm = Math.round(n / 100) + _this.medida;
+        return valorCm
+    };
+    function calculaMetro(n){
+        valorM = Math.round(n / 1000) + _this.medida;
+        return valorM;
+    };
+};
+
+cilindroDois = new Cilindro(150, 10, "m");
+alert("Segundo Cilindro" +
+      "\nRaio da base: " +
+      cilindroDois.raioBase +
+      "\nAltura: " +
+      cilindroDois.altura +
+      "\nÁrea da base: " +
+      cilindroDois.resultAbase +
+      "\nÁrea Lateral: " +
+      cilindroDois.resultLateral +
+      "\n Área Total: " +
+      cilindroDois.resultAreaTotal +
+      "\nVolume: " +
+       cilindroDois.volume
+    );
+
+
+
+
+
+</script>
+
+</html>

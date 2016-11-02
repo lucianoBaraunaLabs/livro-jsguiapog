@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+      function scharAt(){
+      var texto = "mau%\SR=+t$@ 098mu hjor \\\a",
+            indice = Number(document.form.indice.value);
+        console.log("entrou");
+        console.log("Retorno tamanho total do texto: " + texto.length);
+        console.log("Valor digitado: " + indice);
+        console.log("Retorno isfinite: " + isFinite(indice));
+        if (isFinite(indice) && indice >= 0 && indice <= texto.length-1) {
+          document.form.resultado.value = texto.charAt(indice);
+        } else {
+          alert("Entre um índice válido");
+        }
+      }
+    </script>
+</head>
+<body>
+  <form name="form" action="" method="get">
+    <label for="">Indice: <input type="text" name="indice" size="2" maxlenght="2" value="0" /></label>
+    <button type="button" onclick="scharAt();">string.charAt()</button>
+    <input type="text" name="resultado" size="1" maxlength="2" />
+  </form>
+</body>
+</html>

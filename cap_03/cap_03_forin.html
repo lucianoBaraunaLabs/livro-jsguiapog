@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+<script>
+    var Carro = {
+        nome: "Renaul",
+        modelo: "Logan",
+        comprimento: "4.250mm",
+        cor: {
+            tipo1: "vermelho",
+            tipo2: "azul"
+        }
+    };
+
+    var msg = "",
+        msg2 = "";
+    for(k in Carro){
+        msg += k + ": " + Carro[k] + "\n";
+
+
+
+    }
+    for(j in Carro.cor){
+        msg2 += j + ": " + Carro.cor[j] + "\n";
+    }
+
+    alert(msg + msg2);
+
+
+
+
+
+</script>
+
+</html>

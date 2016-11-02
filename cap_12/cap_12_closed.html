@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contagem Regressiva</title>
+  <script type="text/javascript">
+    var janelaAberta = window.open('', '', 'width=400, height=200');
+    function testarJanela(){
+      if(janelaAberta.closed){
+        alert('A janela foi fechada');
+      } else {
+        alert('A janela está aberta');
+      }
+    }
+  </script>
+</head>
+<body>
+  <button type="button" onclick="testarJanela();">TESTAR JANELA</button>
+</body>
+</html>

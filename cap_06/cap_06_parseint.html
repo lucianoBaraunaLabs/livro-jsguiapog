@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        function numero(x) {
+            eval('var bool = parseInt(x); alert(bool);');
+        }
+    </script>
+
+</head>
+<body>
+    <button type="button" onclick="numero('1.56');">parseInt('1.56');</button>
+    <button type="button" onclick="numero('xpto97');">parseInt('xpto97');</button>
+    <button type="button" onclick="numero('-3/5');">parseInt('-3/5');</button>
+    <button type="button" onclick="numero('36maujor50');">parseInt(36maujor50);</button>
+    <button type="button" onclick="numero(new Date());">parseInt(new Date());</button>
+</body>
+
+</html>
